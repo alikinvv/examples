@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <title>АСУ ИСМ</title>
+        <style>
+            #firstMount {
+                position: absolute;
+                gap: 50px;
+                display: grid;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                justify-items: center;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: white;
+            }
+            .circular-loader {
+                animation: rotate 2s linear infinite;
+                height: 48px;
+                transform-origin: center center;
+                width: 48px;
+                margin: 0 50px;
+            }
+
+            .loader-path {
+                stroke-dasharray: 150, 200;
+                stroke-dashoffset: -10;
+                animation: dash 1.5s ease-in-out infinite;
+                stroke-linecap: round;
+            }
+
+            @keyframes rotate {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes dash {
+                0% {
+                    stroke-dasharray: 1, 200;
+                    stroke-dashoffset: 0;
+                }
+                50% {
+                    stroke-dasharray: 89, 200;
+                    stroke-dashoffset: -35;
+                }
+                100% {
+                    stroke-dasharray: 89, 200;
+                    stroke-dashoffset: -124;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root">
+            <div id="firstMount">
+                <svg class="circular-loader" viewBox="25 25 50 50">
+                    <circle
+                        class="loader-path"
+                        cx="50"
+                        cy="50"
+                        r="20"
+                        fill="none"
+                        stroke="#83899B"
+                        stroke-width="3"
+                    />
+                </svg>
+            </div>
+        </div>
+    </body>
+</html>

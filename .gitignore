@@ -1,0 +1,6 @@
+/.idea/
+/node_modules/
+/build/
+/public/env.js
+/storybook-static/
+.env
